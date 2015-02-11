@@ -48,3 +48,14 @@ available options:
 7. smallKey
 8. mediumKey
 9. targetId
+
+another exmple set 'images' with 3 dimension array:
+
+```
+'images'=>[
+	'image'=>'an url of zoom image',
+	'small'=>'an url of gallery display image',
+	'medium'=>'an url of basic display image'
+]
+
+```
