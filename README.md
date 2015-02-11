@@ -19,3 +19,32 @@ or add
 ```
 to the require section of your application's `composer.json` file.
 
+Usage
+-----
+
+in View
+
+```
+	use amilna\elevatezoom\ElevateZoom;
+ 
+	echo ElevateZoom::widget([
+ 		'images'=>$images,
+		'baseUrl'=>Yii::$app->urlManager->baseUrl.'/upload',
+		'smallPrefix'=>'/.thumbs',
+		'mediumPrefix'=>'',
+	]);
+```
+
+'images' is array of images (1 or 3 dimensions, if 1 dimensions then you should set baseUrl, smallPrefix and mediumPrefix) or activeDataProvider (if activeDataProvider you should set imageKey, smallKey and mediumKey)
+
+available options:
+
+1. images
+2. css   
+3. baseUrl
+4. smallPrefix
+5. mediumPrefix
+6. imageKey
+7. smallKey
+8. mediumKey
+9. targetId
