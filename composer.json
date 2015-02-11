@@ -1,0 +1,25 @@
+{
+    "name": "amilna/yii2-elevatezoom",
+    "description": "Elevatezoom widget for Yii2",
+    "keywords": ["yii2", "elevatezoom", "widget", "gallery","image"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/amilna/yii2-elevatezoom",
+        "issues": "https://github.com/amilna/yii2-elevatezoom/issues"
+    },
+    "authors": [
+        {
+            "name": "Amilna",
+            "homepage": "https://github.com/amilna/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"       
+    },
+    "autoload": {
+        "psr-4": {
+            "amilna\\elevatezoom\\": ""
+        }
+    }
+}
