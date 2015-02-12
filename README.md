@@ -29,7 +29,14 @@ in View
  	
 	$images = ['an url of zoom image 1','an url of zoom image n'];
 
-	/* //or another exmple set 'images' with 3 dimension array:
+	echo ElevateZoom::widget([
+ 		'images'=>$images,
+		'baseUrl'=>Yii::$app->urlManager->baseUrl.'/upload',
+		'smallPrefix'=>'/.thumbs',
+		'mediumPrefix'=>'',
+	]);
+
+	/* //or another example set 'images' with 3 dimension array:
 	$images'= [
 		[	
 			'image'=>'an url of zoom image 1',
@@ -42,14 +49,13 @@ in View
 			'medium'=>'an url of basic display image n'
 		],
 	];
-	*/
 
 	echo ElevateZoom::widget([
- 		'images'=>$images,
-		'baseUrl'=>Yii::$app->urlManager->baseUrl.'/upload',
-		'smallPrefix'=>'/.thumbs',
-		'mediumPrefix'=>'',
+ 		'images'=>$images,		
 	]);
+	*/
+
+
 ```
 
 'images' is array of images (1 or 3 dimensions, if 1 dimensions then you should set baseUrl, smallPrefix and mediumPrefix) or activeDataProvider (if activeDataProvider you should set imageKey, smallKey and mediumKey)
@@ -57,11 +63,12 @@ in View
 available options:
 
 1. images
-2. css   
-3. baseUrl
-4. smallPrefix
-5. mediumPrefix
-6. imageKey
-7. smallKey
-8. mediumKey
-9. targetId
+2. css  		(custom css) 
+3. baseUrl 	(string basic replacer of image url)
+4. smallPrefix 	(string replacer to get small size image url)
+5. mediumPrefix 	(string replacer to get medium size image url)
+6. imageKey 	(model atribute that store zoom size image)
+7. smallKey 	(model atribute that store small size image)
+8. mediumKey 	(model atribute that store medium size image)
+9. targetId	(custom container id) 
+10. options (please see [examples](http://www.elevateweb.co.uk/image-zoom/examples))

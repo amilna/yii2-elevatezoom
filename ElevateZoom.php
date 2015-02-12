@@ -38,6 +38,13 @@ class ElevateZoom extends Widget
 	public $smallKey = null;
 	public $mediumKey = null;
 	
+	public $options = [		
+		'zoomType'=> "lens", 
+		'containLensZoom'=> true, 
+		'gallery'=>'galez',		
+		'cursor'=>'crosshair',			
+	];
+	
     private $bundle = null;
 
     public function init()
@@ -101,12 +108,7 @@ class ElevateZoom extends Widget
 			//var ez =   $('#elevatezoom-0').data('elevateZoom');
 			//ez.swaptheimage(smallImage, largeImage); 
 			
-			$('#elevatezoom-0').elevateZoom({
-				gallery	: 'galez',
-				tint: true,
-				cursor:'crosshair',	
-				windowHeight:600		
-			});
+			$('#elevatezoom-0').elevateZoom(".json_encode($this->options).");
 			" . PHP_EOL;
 		
 
