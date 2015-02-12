@@ -40,7 +40,9 @@ class ElevateZoom extends Widget
 	
 	public $options = [		
 		'zoomType'=> "lens", 
-		'containLensZoom'=> true, 
+		'containLensZoom'=> false,		
+		'borderSize'=>0,
+		'scrollZoom'=> true, 
 		'gallery'=>'galez',		
 		'cursor'=>'crosshair',			
 	];
