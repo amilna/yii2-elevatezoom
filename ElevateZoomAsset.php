@@ -26,6 +26,6 @@ class ElevateZoomAsset extends AssetBundle
     {
         parent::init();
 
-        $this->js[] = YII_DEBUG ? 'js/jquery.elevatezoom.js' : 'js/jquery.elevateZoom-3.0.8.min.js';       
+        $this->js[] = YII_DEBUG ? 'js/jquery.elevatezoom.js' : 'js/jquery.elevateZoom-3.0.8.min.js';               
     }    
 }
